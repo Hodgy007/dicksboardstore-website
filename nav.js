@@ -438,15 +438,51 @@
       renderPage();
     }
 
+    // Mark empty categories as "Coming Soon" and block filtering
+    var comingSoonMsg = productGrid.querySelector('.coming-soon-msg');
+    if (!comingSoonMsg) {
+      comingSoonMsg = document.createElement('div');
+      comingSoonMsg.className = 'coming-soon-msg';
+      comingSoonMsg.style.cssText = 'display:none;text-align:center;padding:4rem 2rem;';
+      comingSoonMsg.innerHTML = '<div style="font-size:3rem;margin-bottom:1rem;">🎿</div>' +
+        '<h3 style="font-family:\'Barlow Condensed\',sans-serif;font-size:1.8rem;color:#0A1628;margin-bottom:0.5rem;">Coming Soon</h3>' +
+        '<p style="color:#888;font-size:1rem;">We\'re working on expanding this category. Check back soon or <a href="about.html#contact" style="color:#E63946;">get in touch</a> to be notified.</p>';
+      productGrid.parentElement.appendChild(comingSoonMsg);
+    }
+
     document.querySelectorAll('.cat-quick-btn').forEach(function(btn) {
+      var cat = btn.getAttribute('data-cat');
+      if (cat !== 'all') {
+        var count = allCards.filter(function(c) { return c.getAttribute('data-cat') === cat; }).length;
+        if (count === 0) {
+          btn.setAttribute('data-coming-soon', '1');
+          btn.innerHTML = btn.textContent + ' <span style="font-size:0.65rem;background:#E63946;color:#fff;border-radius:3px;padding:1px 5px;vertical-align:middle;margin-left:4px;">Soon</span>';
+          btn.style.opacity = '0.6';
+        }
+      }
       btn.addEventListener('click', function() {
+        if (this.getAttribute('data-coming-soon')) {
+          // Show coming soon message instead of blank grid
+          document.querySelectorAll('.cat-quick-btn').forEach(function(b) {
+            b.classList.remove('btn-primary');
+            b.classList.add('btn-outline');
+          });
+          this.classList.remove('btn-outline');
+          this.classList.add('btn-primary');
+          allCards.forEach(function(card) { card.style.display = 'none'; });
+          if (document.getElementById('shop-pagination')) document.getElementById('shop-pagination').innerHTML = '';
+          comingSoonMsg.style.display = 'block';
+          if (countEl) countEl.textContent = '0';
+          return;
+        }
+        comingSoonMsg.style.display = 'none';
         document.querySelectorAll('.cat-quick-btn').forEach(function(b) {
           b.classList.remove('btn-primary');
           b.classList.add('btn-outline');
         });
         this.classList.remove('btn-outline');
         this.classList.add('btn-primary');
-        activeCat = this.getAttribute('data-cat');
+        activeCat = cat;
         applyFilters();
       });
     });
