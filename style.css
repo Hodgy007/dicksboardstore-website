@@ -633,6 +633,17 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
   align-items: center;
   justify-content: center;
   font-size: 4rem;
+  opacity: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Keep emoji fallback placeholders dimmed */
+.product-img-bg.ski-img,
+.product-img-bg.board-img,
+.product-img-bg.boot-img,
+.product-img-bg.cloth-img,
+.product-img-bg.access-img {
   opacity: 0.18;
 }
 
@@ -865,7 +876,9 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  opacity: 0.2;
+  opacity: 1;
+  background-size: cover;
+  background-position: center;
 }
 
 .blog-img-1 { background: linear-gradient(135deg, #0d2040, #1a3a6e); }
