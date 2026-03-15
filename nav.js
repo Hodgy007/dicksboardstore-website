@@ -148,94 +148,79 @@
   });
 
   // ── Shop filters ──
-  var allCards = document.querySelectorAll('.products-grid .product-card');
-  var countEl = document.querySelector('.shop-count strong');
+  var productGrid = document.querySelector('.products-grid');
+  if (productGrid && document.getElementById('apply-filters-btn')) {
 
-  function updateCount(visible) {
-    if (countEl) countEl.textContent = visible;
-  }
-
-  function applyFilters() {
-    // Get active category
+    var allCards = Array.prototype.slice.call(productGrid.querySelectorAll('.product-card'));
+    var countEl = document.querySelector('.shop-count strong');
     var activeCat = 'all';
-    document.querySelectorAll('.cat-quick-btn').forEach(function(b) {
-      if (b.classList.contains('btn-primary')) activeCat = b.dataset.cat;
-    });
 
-    // Get checked brands
-    var checkedBrands = [];
-    document.querySelectorAll('.filter-option input[id^="b-"]:checked').forEach(function(cb) {
-      checkedBrands.push(cb.id.replace('b-', ''));
-    });
+    function updateCount(n) {
+      if (countEl) countEl.textContent = n;
+    }
 
-    // Get checked skill levels
-    var checkedLevels = [];
-    document.querySelectorAll('.filter-option input[id^="sl-"]:checked').forEach(function(cb) {
-      checkedLevels.push(cb.id.replace('sl-', ''));
-    });
+    function applyFilters() {
+      var checkedBrands = Array.prototype.slice.call(
+        document.querySelectorAll('.filter-option input[id^="b-"]:checked')
+      ).map(function(cb) { return cb.id.replace('b-', ''); });
 
-    // Get price range
-    var maxPrice = 800;
-    var priceRange = document.querySelector('.price-range input[type="range"]');
-    var maxInput = document.querySelector('.price-inputs input:last-of-type');
-    if (priceRange) maxPrice = parseInt(priceRange.value);
-    if (maxInput && maxInput.value) maxPrice = parseInt(maxInput.value);
+      var checkedLevels = Array.prototype.slice.call(
+        document.querySelectorAll('.filter-option input[id^="sl-"]:checked')
+      ).map(function(cb) { return cb.id.replace('sl-', ''); });
 
-    var visible = 0;
-    allCards.forEach(function(card) {
-      var cat = card.dataset.cat || '';
-      var brand = card.dataset.brand || '';
-      var price = parseInt(card.dataset.price || 0);
-      var level = card.dataset.level || 'all';
+      var priceSlider = document.querySelector('.price-range input[type="range"]');
+      var maxPrice = priceSlider ? parseInt(priceSlider.value) : 800;
 
-      var catMatch = activeCat === 'all' || cat === activeCat;
-      var brandMatch = checkedBrands.length === 0 || checkedBrands.indexOf(brand) !== -1;
-      var levelMatch = checkedLevels.length === 0 || checkedLevels.indexOf(level) !== -1 || level === 'all';
-      var priceMatch = price <= maxPrice;
+      var visible = 0;
+      allCards.forEach(function(card) {
+        var cat   = card.getAttribute('data-cat') || '';
+        var brand = card.getAttribute('data-brand') || '';
+        var price = parseInt(card.getAttribute('data-price') || '0');
+        var level = card.getAttribute('data-level') || 'all';
 
-      if (catMatch && brandMatch && levelMatch && priceMatch) {
-        card.style.display = '';
-        visible++;
-      } else {
-        card.style.display = 'none';
-      }
-    });
-    updateCount(visible);
-  }
+        var show = (activeCat === 'all' || cat === activeCat) &&
+                   (checkedBrands.length === 0 || checkedBrands.indexOf(brand) !== -1) &&
+                   (checkedLevels.length === 0 || checkedLevels.indexOf(level) !== -1 || level === 'all') &&
+                   price <= maxPrice;
 
-  // Category quick buttons
-  document.querySelectorAll('.cat-quick-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.cat-quick-btn').forEach(function(b) {
-        b.classList.remove('btn-primary');
-        b.classList.add('btn-outline');
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
       });
-      this.classList.remove('btn-outline');
-      this.classList.add('btn-primary');
-      applyFilters();
-    });
-  });
+      updateCount(visible);
+    }
 
-  // Apply filters button
-  var applyBtn = document.querySelector('.shop-sidebar .btn-primary');
-  if (applyBtn) {
-    applyBtn.addEventListener('click', applyFilters);
-  }
+    // Category quick buttons
+    document.querySelectorAll('.cat-quick-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.cat-quick-btn').forEach(function(b) {
+          b.classList.remove('btn-primary');
+          b.classList.add('btn-outline');
+        });
+        this.classList.remove('btn-outline');
+        this.classList.add('btn-primary');
+        activeCat = this.getAttribute('data-cat');
+        applyFilters();
+      });
+    });
 
-  // Live price range slider
-  var priceSlider = document.querySelector('.price-range input[type="range"]');
-  var maxPriceInput = document.querySelector('.price-inputs input:last-of-type');
-  if (priceSlider) {
-    priceSlider.addEventListener('input', function() {
-      if (maxPriceInput) maxPriceInput.value = this.value;
-      applyFilters();
-    });
-  }
-  if (maxPriceInput) {
-    maxPriceInput.addEventListener('input', function() {
-      if (priceSlider) priceSlider.value = this.value;
-      applyFilters();
-    });
+    // Apply Filters button
+    document.getElementById('apply-filters-btn').addEventListener('click', applyFilters);
+
+    // Live price slider
+    var priceSlider = document.querySelector('.price-range input[type="range"]');
+    var maxPriceInput = document.querySelector('.price-inputs input:last-of-type');
+    if (priceSlider) {
+      priceSlider.addEventListener('input', function() {
+        if (maxPriceInput) maxPriceInput.value = this.value;
+        applyFilters();
+      });
+    }
+    if (maxPriceInput) {
+      maxPriceInput.addEventListener('input', function() {
+        if (priceSlider) priceSlider.value = this.value;
+        applyFilters();
+      });
+    }
   }
 
   // ── Smooth scroll for anchor links ──
