@@ -298,6 +298,38 @@
     }
   }
 
+  // ── Image zoom modal (product pages) ──
+  var imgModal = document.getElementById('img-modal');
+  if (imgModal) {
+    var modalImg = imgModal.querySelector('.img-modal-img');
+
+    var mainImage = document.querySelector('.main-image img');
+    if (mainImage) {
+      mainImage.addEventListener('click', function() {
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+        imgModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    imgModal.addEventListener('click', function(e) {
+      if (e.target === imgModal || e.target.classList.contains('img-modal-close')) {
+        imgModal.classList.remove('open');
+        document.body.style.overflow = '';
+        modalImg.src = '';
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && imgModal.classList.contains('open')) {
+        imgModal.classList.remove('open');
+        document.body.style.overflow = '';
+        modalImg.src = '';
+      }
+    });
+  }
+
   // ── Smooth scroll for anchor links ──
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
