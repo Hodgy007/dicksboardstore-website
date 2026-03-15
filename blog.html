@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ski and snowboard advice, gear guides, and mountain inspiration from the experts at Dick's Board Store Sheffield. Boot fitting tips, best snowboards 2025, servicing guides and more.">
+  <title>Blog — Expert Ski & Snowboard Advice | Dick's Board Store Sheffield</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Blog-specific styles */
+    .blog-full-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+    }
+    .blog-full-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+    .blog-full-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      opacity: 0.22;
+      min-height: 220px;
+    }
+    .blog-full-body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-full-body h2 {
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      color: #0A1628;
+      margin-bottom: 0.75rem;
+    }
+    .blog-full-body p {
+      color: #555;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+    @media (max-width: 640px) {
+      .blog-full-card { grid-template-columns: 1fr; }
+      .blog-full-img { min-height: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">DICK'S<span>BOARD</span>STORE</a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About & Find Us</a>
+          <a href="blog.html" class="active">Blog</a>
+        </nav>
+        <div class="header-actions">
+          <button class="basket-btn" aria-label="View basket">
+            <span class="basket-icon">🛒</span>
+            Basket
+            <span class="basket-count">0</span>
+          </button>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About & Find Us</a>
+      <a href="blog.html" class="active">Blog</a>
+    </nav>
+  </header>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Blog</span>
+      </div>
+      <h1>The Board Store Blog</h1>
+      <p>Expert advice, gear reviews, and winter sports inspiration from our Sheffield team</p>
+    </div>
+  </section>
+
+  <!-- ── CATEGORIES ── -->
+  <section class="section-sm bg-light">
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;">
+        <a href="#" class="btn btn-primary" style="font-size:0.85rem;padding:0.5rem 1.1rem;">All Articles</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Boot Fitting</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Gear Guides</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Maintenance</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Snowboarding</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Skiing</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">News</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED ARTICLE ── -->
+  <section class="section">
+    <div class="container">
+      <div style="background:linear-gradient(135deg,#0A1628 0%,#1a2f52 100%);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:380px;">
+        <div style="display:flex;align-items:center;justify-content:center;font-size:8rem;opacity:0.12;background:rgba(255,255,255,0.03);">🎿</div>
+        <div style="padding:3rem 3rem 3rem 1.5rem;display:flex;flex-direction:column;justify-content:center;">
+          <div style="display:flex;gap:0.75rem;margin-bottom:1rem;">
+            <span class="badge badge-new">Featured</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Boot Fitting · Jan 2025</span>
+          </div>
+          <h2 style="color:#fff;font-size:clamp(1.4rem,2.5vw,2.2rem);margin-bottom:1rem;line-height:1.15;">The Ultimate Guide to Choosing Your Perfect Ski Boots (and Why Fit Matters Most)</h2>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.7;margin-bottom:1.75rem;">Investing in the right ski boots is crucial for comfort and performance on the slopes, and it's far more complex than just picking your shoe size. Our expert guide breaks down shell types, flex, and liner customisation to ensure a truly perfect fit.</p>
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <a href="#" class="btn btn-primary">Read Full Article →</a>
+            <span style="font-size:0.82rem;color:rgba(255,255,255,0.4);">12 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLOG LIST ── -->
+  <section class="section bg-light">
+    <div class="container">
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+        <div class="blog-full-card">
+          <div class="blog-full-img blog-img-2">🏂</div>
+          <div class="blog-full-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Gear Guide</span>
+              <span>December 2024</span>
+              <span>8 min read</span>
+            </div>
+            <h2>Shred Ready: The Best Snowboards of 2025 You Need to Know About</h2>
+            <p>Get ahead of the curve with our comprehensive roundup of the top snowboards hitting the slopes for the 2025 season. From powder hounds to park rats, we've handpicked the boards that promise to elevate your riding experience this winter — including picks from Burton, K2, Capita, and Lib Tech.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <a href="#" class="blog-link">Read More →</a>
+              <span style="font-size:0.8rem;color:#888;">By Jess Collins</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-full-card">
+          <div class="blog-full-img blog-img-3">🔧</div>
+          <div class="blog-full-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Maintenance</span>
+              <span>November 2024</span>
+              <span>7 min read</span>
+            </div>
+            <h2>Maintain Your Ride: A Beginner's Guide to Ski &amp; Snowboard Servicing</h2>
+            <p>Proper maintenance is key to extending the life of your equipment and enhancing your performance on the snow. Learn the essentials of waxing, edging, and base repair to keep your skis and snowboard in peak condition all season long — and find out when to DIY versus when to bring it to the professionals.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <a href="#" class="blog-link">Read More →</a>
+              <span style="font-size:0.8rem;color:#888;">By Tom Bradley</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-full-card">
+          <div class="blog-full-img blog-img-4">👢</div>
+          <div class="blog-full-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Boot Fitting</span>
+              <span>October 2024</span>
+              <span>6 min read</span>
+            </div>
+            <h2>Ski Boot Flex Explained: What Flex Index Is Right for You?</h2>
+            <p>One of the most misunderstood aspects of ski boot selection is flex — and getting it wrong can ruin your skiing experience. Too soft and you'll lack power transfer; too stiff and you'll be battling the boot all day. Our fitters explain exactly how to determine the right flex index for your ability level, physique, and skiing style.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <a href="#" class="blog-link">Read More →</a>
+              <span style="font-size:0.8rem;color:#888;">By Dick Hartley</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-full-card">
+          <div class="blog-full-img blog-img-5">🏔️</div>
+          <div class="blog-full-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Gear Guide</span>
+              <span>September 2024</span>
+              <span>9 min read</span>
+            </div>
+            <h2>Best Ski Jackets of 2024/25: Technical Performance Meets Style</h2>
+            <p>Whether you're an off-piste powder hunter or a groomer cruiser, the right jacket will keep you warm, dry, and moving freely all day. We've tested the season's standout technical outerwear — from fully featured 3-layer hard shells to versatile insulated options — so you can make the right choice before winter hits.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <a href="#" class="blog-link">Read More →</a>
+              <span style="font-size:0.8rem;color:#888;">By Amy Xu</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-full-card">
+          <div class="blog-full-img blog-img-6">🥽</div>
+          <div class="blog-full-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Gear Guide</span>
+              <span>August 2024</span>
+              <span>5 min read</span>
+            </div>
+            <h2>Goggles Guide 2025: Lens Technology, Fit, and the Best Picks</h2>
+            <p>Great goggles are one of the best investments you can make for your time on the mountain — they protect your eyes, improve contrast and depth perception, and can genuinely make bad visibility conditions manageable. We break down lens categories, OTG options, and our top picks for every budget from Oakley, Smith, Anon, and POC.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <a href="#" class="blog-link">Read More →</a>
+              <span style="font-size:0.8rem;color:#888;">By Jess Collins</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-full-card">
+          <div class="blog-full-img blog-img-1">🎿</div>
+          <div class="blog-full-body">
+            <div class="blog-meta">
+              <span class="blog-tag">Skiing</span>
+              <span>July 2024</span>
+              <span>6 min read</span>
+            </div>
+            <h2>Rocker vs Camber Skis: Which Profile is Right for Your Skiing?</h2>
+            <p>The camber/rocker profile of a ski dramatically affects how it handles on different terrain and snow conditions — yet it's one of the most overlooked factors when buying skis. Our team explains the difference between traditional camber, full rocker, hybrid profiles, and twin-tips, helping you match the right ski shape to your riding style and favourite terrain.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <a href="#" class="blog-link">Read More →</a>
+              <span style="font-size:0.8rem;color:#888;">By Dick Hartley</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:3.5rem;">
+        <button style="padding:0.6rem 1rem;background:#E63946;color:#fff;border:none;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;cursor:pointer;">1</button>
+        <button style="padding:0.6rem 1rem;background:#fff;color:#0A1628;border:1px solid #ddd;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;cursor:pointer;">2</button>
+        <button style="padding:0.6rem 1rem;background:#fff;color:#0A1628;border:1px solid #ddd;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;cursor:pointer;">3</button>
+        <button style="padding:0.6rem 1rem;background:#fff;color:#0A1628;border:1px solid #ddd;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;cursor:pointer;">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWSLETTER CTA ── -->
+  <section class="email-section">
+    <div class="container">
+      <h2>Never Miss a New Article</h2>
+      <p>Subscribe and get the latest gear guides, boot fitting tips, and Sheffield store news delivered to your inbox.</p>
+      <form class="email-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">DICK'S<span>BOARD</span>STORE</div>
+          <p class="footer-tagline">Sheffield's independent ski & snowboard specialist since 1989. Passionate about winter sports, expert boot fitting, and helping you find your perfect kit.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">in</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">✕</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="services.html">Boot Fitting</a></li>
+            <li><a href="services.html">Ski Servicing</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Categories</div>
+          <ul class="footer-links">
+            <li><a href="shop.html">Alpine Skis</a></li>
+            <li><a href="shop.html">Snowboards</a></li>
+            <li><a href="shop.html">Ski Boots</a></li>
+            <li><a href="shop.html">Snowboard Boots</a></li>
+            <li><a href="shop.html">Clothing</a></li>
+            <li><a href="shop.html">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-heading">Find Us</div>
+          <p><strong>📍</strong> 42 Winter Street, Sheffield, S1 4GH</p>
+          <p><strong>📞</strong> 0114 272 8800</p>
+          <p><strong>✉️</strong> hello@dicksboardstore.co.uk</p>
+          <br>
+          <div class="footer-heading" style="margin-bottom:0.75rem;">Opening Hours</div>
+          <table class="hours-table">
+            <tr><td>Mon–Fri</td><td>9:30am – 6:00pm</td></tr>
+            <tr><td>Saturday</td><td>9:00am – 5:30pm</td></tr>
+            <tr><td>Sunday</td><td>10:00am – 4:00pm</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Dick's Board Store Ltd. All rights reserved. | Sheffield, UK |
+          <a href="#" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> ·
+          <a href="#" style="color:rgba(255,255,255,0.4);">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

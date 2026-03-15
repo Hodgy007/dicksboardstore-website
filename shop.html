@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop ski and snowboard equipment at Dick's Board Store Sheffield. Skis, boots, boards, clothing and accessories from Salomon, Burton, K2, Head and more.">
+  <title>Shop | Dick's Board Store Sheffield</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">DICK'S<span>BOARD</span>STORE</a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html" class="active">Shop</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About & Find Us</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+        <div class="header-actions">
+          <button class="basket-btn" aria-label="View basket">
+            <span class="basket-icon">🛒</span>
+            Basket
+            <span class="basket-count">0</span>
+          </button>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About & Find Us</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Shop</span>
+      </div>
+      <h1>Shop All Products</h1>
+      <p>Ski gear, snowboard equipment, clothing and accessories — expertly curated for all levels</p>
+    </div>
+  </section>
+
+  <!-- ── CATEGORY QUICK LINKS ── -->
+  <section class="section-sm bg-light">
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;">
+        <a href="#" class="btn btn-primary" style="font-size:0.85rem;padding:0.5rem 1.1rem;">All Products</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Alpine Skis</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Snowboards</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Ski Boots</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Snowboard Boots</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Jackets</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Goggles</a>
+        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Helmets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SHOP LAYOUT ── -->
+  <section class="section">
+    <div class="container">
+      <div class="shop-layout">
+
+        <!-- Sidebar -->
+        <aside class="shop-sidebar">
+
+          <div class="filter-section">
+            <div class="filter-title">Brand</div>
+            <div class="filter-option"><input type="checkbox" id="b-salomon"><label for="b-salomon">Salomon</label><span class="filter-count">(8)</span></div>
+            <div class="filter-option"><input type="checkbox" id="b-burton"><label for="b-burton">Burton</label><span class="filter-count">(6)</span></div>
+            <div class="filter-option"><input type="checkbox" id="b-k2"><label for="b-k2">K2</label><span class="filter-count">(5)</span></div>
+            <div class="filter-option"><input type="checkbox" id="b-head"><label for="b-head">Head</label><span class="filter-count">(4)</span></div>
+            <div class="filter-option"><input type="checkbox" id="b-oakley"><label for="b-oakley">Oakley</label><span class="filter-count">(4)</span></div>
+            <div class="filter-option"><input type="checkbox" id="b-poc"><label for="b-poc">POC</label><span class="filter-count">(3)</span></div>
+            <div class="filter-option"><input type="checkbox" id="b-hestra"><label for="b-hestra">Hestra</label><span class="filter-count">(3)</span></div>
+            <div class="filter-option"><input type="checkbox" id="b-atomic"><label for="b-atomic">Atomic</label><span class="filter-count">(3)</span></div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-title">Price Range</div>
+            <div class="price-range">
+              <input type="range" min="0" max="800" value="800" style="accent-color:#E63946;width:100%;">
+              <div class="price-inputs">
+                <input type="number" value="0" min="0" max="800" placeholder="£ Min">
+                <span>—</span>
+                <input type="number" value="800" min="0" max="800" placeholder="£ Max">
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-title">Skill Level</div>
+            <div class="filter-option"><input type="checkbox" id="sl-beg"><label for="sl-beg">Beginner</label></div>
+            <div class="filter-option"><input type="checkbox" id="sl-int"><label for="sl-int">Intermediate</label></div>
+            <div class="filter-option"><input type="checkbox" id="sl-adv"><label for="sl-adv">Advanced</label></div>
+            <div class="filter-option"><input type="checkbox" id="sl-all"><label for="sl-all">All Levels</label></div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-title">Category</div>
+            <div class="filter-option"><input type="checkbox" id="cat-skis"><label for="cat-skis">Alpine Skis</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-boards"><label for="cat-boards">Snowboards</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-skiboots"><label for="cat-skiboots">Ski Boots</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-sbboots"><label for="cat-sbboots">Snowboard Boots</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-jackets"><label for="cat-jackets">Jackets</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-gloves"><label for="cat-gloves">Gloves</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-goggles"><label for="cat-goggles">Goggles</label></div>
+            <div class="filter-option"><input type="checkbox" id="cat-helmets"><label for="cat-helmets">Helmets</label></div>
+          </div>
+
+          <button class="btn btn-primary" style="width:100%;margin-top:0.5rem;">Apply Filters</button>
+
+        </aside>
+
+        <!-- Product grid -->
+        <div class="shop-main">
+          <div class="shop-toolbar">
+            <span class="shop-count">Showing <strong>12</strong> of 48 products</span>
+            <select class="sort-select">
+              <option>Sort: Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest First</option>
+              <option>Best Sellers</option>
+            </select>
+          </div>
+
+          <div class="products-grid">
+
+            <a href="product.html" class="product-card" style="text-decoration:none;color:inherit;">
+              <div class="product-img">
+                <div class="product-img-bg ski-img">🎿</div>
+                <span class="product-badge badge badge-new">New</span>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Salomon</div>
+                <div class="product-name">S/Max 10 Alpine Skis</div>
+                <p class="product-desc">Precision carving for intermediate to advanced piste skiers seeking a dynamic feel.</p>
+                <div class="product-footer">
+                  <span class="product-price">£550</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </a>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg board-img">🏂</div>
+                <span class="product-badge badge badge-best">Best Seller</span>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Burton</div>
+                <div class="product-name">Custom Snowboard</div>
+                <p class="product-desc">The legendary all-mountain board, offering versatility for riders across the resort.</p>
+                <div class="product-footer">
+                  <span class="product-price">£480</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <a href="product.html" class="product-card" style="text-decoration:none;color:inherit;">
+              <div class="product-img">
+                <div class="product-img-bg boot-img">👢</div>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Head</div>
+                <div class="product-name">Formula 120 Ski Boots</div>
+                <p class="product-desc">High-performance boots delivering aggressive power transmission for advanced skiers.</p>
+                <div class="product-footer">
+                  <span class="product-price">£380</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </a>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg boot-img">👟</div>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">K2</div>
+                <div class="product-name">Maysis Snowboard Boots</div>
+                <p class="product-desc">Durable and comfortable all-mountain boots with a responsive flex.</p>
+                <div class="product-footer">
+                  <span class="product-price">£270</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg cloth-img">🧥</div>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Scott</div>
+                <div class="product-name">Vertic 3L Ski Jacket</div>
+                <p class="product-desc">High-performance 3-layer shell offering ultimate protection and breathability.</p>
+                <div class="product-footer">
+                  <span class="product-price">£420</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg access-img">🧤</div>
+                <span class="product-badge badge badge-best">Best Seller</span>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Hestra</div>
+                <div class="product-name">Army Leather Heli Ski Gloves</div>
+                <p class="product-desc">Extremely durable professional-grade gloves, perfect for cold weather adventures.</p>
+                <div class="product-footer">
+                  <span class="product-price">£130</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg access-img">🥽</div>
+                <span class="product-badge badge badge-new">New</span>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Oakley</div>
+                <div class="product-name">Flight Deck L Prizm Goggles</div>
+                <p class="product-desc">Oversized frameless goggles with Prizm lens for enhanced contrast and visibility.</p>
+                <div class="product-footer">
+                  <span class="product-price">£190</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg access-img">⛑️</div>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">POC</div>
+                <div class="product-name">Obex Spin Helmet</div>
+                <p class="product-desc">Lightweight and highly protective helmet featuring SPIN impact protection technology.</p>
+                <div class="product-footer">
+                  <span class="product-price">£180</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg ski-img">🎿</div>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Atomic</div>
+                <div class="product-name">Redster Carbon Ski Poles</div>
+                <p class="product-desc">Light and stiff carbon poles for performance on groomed slopes or the race track.</p>
+                <div class="product-footer">
+                  <span class="product-price">£95</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg ski-img">⚙️</div>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Marker</div>
+                <div class="product-name">Griffon 13 ID Ski Bindings</div>
+                <p class="product-desc">Versatile and reliable alpine bindings compatible with alpine and touring boot soles.</p>
+                <div class="product-footer">
+                  <span class="product-price">£220</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg cloth-img">👕</div>
+                <span class="product-badge badge badge-best">Best Seller</span>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Icebreaker</div>
+                <div class="product-name">Merino 200 Oasis Base Layer</div>
+                <p class="product-desc">100% merino wool base layer for superior temperature regulation in any condition.</p>
+                <div class="product-footer">
+                  <span class="product-price">£85</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img">
+                <div class="product-img-bg access-img">🎒</div>
+                <span class="product-badge badge badge-sale">Sale</span>
+              </div>
+              <div class="product-body">
+                <div class="product-brand">Dakine</div>
+                <div class="product-name">Ski Roller Bag</div>
+                <p class="product-desc">Padded wheeled ski bag for comfortable transport of two pairs of skis and poles.</p>
+                <div class="product-footer">
+                  <span class="product-price">£<del style="font-size:0.9rem;color:#aaa">200</del> 160</span>
+                  <button class="btn-add">Add to Basket</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination -->
+          <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:3rem;">
+            <button style="padding:0.6rem 1rem;background:#E63946;color:#fff;border:none;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;cursor:pointer;">1</button>
+            <button style="padding:0.6rem 1rem;background:#fff;color:#0A1628;border:1px solid #ddd;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;cursor:pointer;">2</button>
+            <button style="padding:0.6rem 1rem;background:#fff;color:#0A1628;border:1px solid #ddd;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;cursor:pointer;">3</button>
+            <button style="padding:0.6rem 1rem;background:#fff;color:#0A1628;border:1px solid #ddd;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;cursor:pointer;">Next →</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">DICK'S<span>BOARD</span>STORE</div>
+          <p class="footer-tagline">Sheffield's independent ski & snowboard specialist since 1989. Passionate about winter sports, expert boot fitting, and helping you find your perfect kit.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">in</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">✕</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="services.html">Boot Fitting</a></li>
+            <li><a href="services.html">Ski Servicing</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Categories</div>
+          <ul class="footer-links">
+            <li><a href="shop.html">Alpine Skis</a></li>
+            <li><a href="shop.html">Snowboards</a></li>
+            <li><a href="shop.html">Ski Boots</a></li>
+            <li><a href="shop.html">Snowboard Boots</a></li>
+            <li><a href="shop.html">Clothing</a></li>
+            <li><a href="shop.html">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-heading">Find Us</div>
+          <p><strong>📍</strong> 42 Winter Street, Sheffield, S1 4GH</p>
+          <p><strong>📞</strong> 0114 272 8800</p>
+          <p><strong>✉️</strong> hello@dicksboardstore.co.uk</p>
+          <br>
+          <div class="footer-heading" style="margin-bottom:0.75rem;">Opening Hours</div>
+          <table class="hours-table">
+            <tr><td>Mon–Fri</td><td>9:30am – 6:00pm</td></tr>
+            <tr><td>Saturday</td><td>9:00am – 5:30pm</td></tr>
+            <tr><td>Sunday</td><td>10:00am – 4:00pm</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Dick's Board Store Ltd. All rights reserved. | Sheffield, UK |
+          <a href="#" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> ·
+          <a href="#" style="color:rgba(255,255,255,0.4);">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

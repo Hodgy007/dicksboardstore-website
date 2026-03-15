@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert boot fitting and ski servicing at Dick's Board Store Sheffield. 35 years experience, heat moulding, pressure mapping, edge sharpening, base repair and waxing.">
+  <title>Services — Boot Fitting & Ski Servicing | Dick's Board Store Sheffield</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">DICK'S<span>BOARD</span>STORE</a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="services.html" class="active">Services</a>
+          <a href="about.html">About & Find Us</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+        <div class="header-actions">
+          <button class="basket-btn" aria-label="View basket">
+            <span class="basket-icon">🛒</span>
+            Basket
+            <span class="basket-count">0</span>
+          </button>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About & Find Us</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Services</span>
+      </div>
+      <h1>Expert Services</h1>
+      <p>35 years of craftsmanship — making your time on the mountain better, every single day</p>
+    </div>
+  </section>
+
+  <!-- ── BOOT FITTING ── -->
+  <section class="section" id="boot-fitting">
+    <div class="container">
+      <div class="service-detail-card">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
+          <span style="font-size:1.75rem;">👢</span>
+          <div style="height:4px;width:60px;background:#E63946;border-radius:2px;"></div>
+        </div>
+        <h2 style="color:#0A1628;font-size:clamp(1.6rem,3vw,2.5rem);margin-bottom:1.5rem;">Expert Boot Fitting</h2>
+        <div class="service-detail-grid">
+          <div>
+            <p style="color:#444;line-height:1.75;margin-bottom:1.25rem;">At Dick's Board Store, our boot fitting service is backed by over 35 years of dedicated expertise, ensuring you get the perfect fit for ultimate comfort and performance on the slopes. We utilise advanced techniques, including custom heat moulding of liners and shells, to perfectly sculpt the boot to your unique foot anatomy.</p>
+            <p style="color:#444;line-height:1.75;margin-bottom:1.75rem;">Our precise pressure mapping technology identifies pressure points, allowing us to make targeted adjustments for a truly bespoke fit that eliminates discomfort and enhances control — whether you're a first-timer or an Olympic hopeful.</p>
+
+            <h3 style="color:#0A1628;margin-bottom:1rem;font-size:1.2rem;">What's Included</h3>
+            <ul class="service-features-list">
+              <li>Foot measurement and assessment (length, width, arch)</li>
+              <li>Pressure mapping scan to identify problem areas</li>
+              <li>Shell fitting — trying multiple brands and lasts</li>
+              <li>Custom heat moulding of liner to your foot shape</li>
+              <li>Shell modification if required (spot heating/punching)</li>
+              <li>Custom footbed creation for arch support</li>
+              <li>Forward lean and canting adjustment</li>
+              <li>Walk-out test and final refinements</li>
+            </ul>
+            <div style="margin-top:1.75rem;padding:1rem 1.25rem;background:#F4F4F4;border-left:4px solid #4FC3F7;border-radius:0 5px 5px 0;">
+              <strong style="color:#0A1628;">Session length:</strong>
+              <span style="color:#555;font-size:0.9rem;"> 1–2 hours. Appointment essential. Boot fitting fee from <strong>£30</strong> (redeemable against boot purchase).</span>
+            </div>
+          </div>
+          <div>
+            <div class="service-visual service-visual-boot">👢</div>
+            <div style="margin-top:1.5rem;">
+              <h3 style="color:#0A1628;margin-bottom:1.25rem;font-size:1.2rem;">Book Your Boot Fitting</h3>
+              <form class="booking-form" style="background:#F4F4F4;border-radius:8px;padding:1.75rem;">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="bf-name">Full Name *</label>
+                    <input type="text" id="bf-name" placeholder="John Smith" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="bf-email">Email *</label>
+                    <input type="email" id="bf-email" placeholder="john@email.com" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="bf-date">Preferred Date *</label>
+                    <input type="date" id="bf-date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="bf-type">Boot Type</label>
+                    <select id="bf-type">
+                      <option>Alpine Ski Boots</option>
+                      <option>Snowboard Boots</option>
+                      <option>Touring / AT Boots</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="bf-level">Skiing Experience</label>
+                  <select id="bf-level">
+                    <option>Complete Beginner</option>
+                    <option>Beginner (1–3 weeks)</option>
+                    <option>Intermediate (comfortable on blues/reds)</option>
+                    <option>Advanced (blacks, off-piste)</option>
+                    <option>Expert / Racer</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="bf-notes">Any notes (foot issues, previous boots, etc.)</label>
+                  <textarea id="bf-notes" placeholder="E.g. Wide feet, bunions, previously had pressure on little toe..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;font-size:1.1rem;padding:1rem;">Book Boot Fitting</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKI SERVICING ── -->
+  <section class="section bg-light" id="ski-servicing">
+    <div class="container">
+      <div class="service-detail-card">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
+          <span style="font-size:1.75rem;">🔧</span>
+          <div style="height:4px;width:60px;background:#E63946;border-radius:2px;"></div>
+        </div>
+        <h2 style="color:#0A1628;font-size:clamp(1.6rem,3vw,2.5rem);margin-bottom:1.5rem;">Ski &amp; Snowboard Servicing</h2>
+        <div class="service-detail-grid">
+          <div>
+            <p style="color:#444;line-height:1.75;margin-bottom:1.25rem;">Keep your skis in peak condition with our professional in-house workshop at Dick's Board Store, equipped to handle all your maintenance needs. Our skilled technicians provide expert edge sharpening for optimal grip and carving, alongside comprehensive base repairs to address any gouges or damage.</p>
+            <p style="color:#444;line-height:1.75;margin-bottom:1.75rem;">We finish every service with a high-quality waxing treatment, ensuring smooth gliding and protecting your bases, so you're always ready for the mountain. Drop off and collect in store — typically ready within 24–48 hours.</p>
+
+            <h2 style="color:#0A1628;margin-bottom:0.75rem;font-size:1.3rem;">Service Prices</h2>
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>What's Included</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Basic Service</strong></td>
+                  <td>Base clean, edge tune, hot wax</td>
+                  <td>£25</td>
+                </tr>
+                <tr>
+                  <td><strong>Full Service</strong></td>
+                  <td>Base grind, edge sharpen, base repair (up to 3 gouges), hot wax, binding check</td>
+                  <td>£45</td>
+                </tr>
+                <tr>
+                  <td><strong>Premium Service</strong></td>
+                  <td>Full service + structured grind, full base repair, race wax, binding test and adjustment</td>
+                  <td>£65</td>
+                </tr>
+                <tr>
+                  <td><strong>Binding Mount</strong></td>
+                  <td>Mount and test new bindings to DIN spec</td>
+                  <td>£30</td>
+                </tr>
+                <tr>
+                  <td><strong>Edge Sharpen Only</strong></td>
+                  <td>Side and base edge sharpening</td>
+                  <td>£15</td>
+                </tr>
+                <tr>
+                  <td><strong>Wax Only</strong></td>
+                  <td>Hot wax application and buff</td>
+                  <td>£12</td>
+                </tr>
+                <tr>
+                  <td><strong>Snowboard Service</strong></td>
+                  <td>Full service (as above) for snowboards</td>
+                  <td>£45</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-top:1.5rem;padding:1rem 1.25rem;background:#fff;border:1px solid #eee;border-radius:6px;">
+              <strong style="color:#0A1628;display:block;margin-bottom:0.5rem;">📦 Drop-Off Info</strong>
+              <p style="font-size:0.88rem;color:#555;line-height:1.6;">Drop your skis or board in-store during opening hours. A member of our team will assess your equipment and advise on the best service. Standard turnaround is <strong>24–48 hours</strong>. Pre-season and peak holiday periods may be longer — call ahead to confirm. Collection in store only.</p>
+            </div>
+          </div>
+          <div>
+            <div class="service-visual service-visual-ski">🎿</div>
+            <div style="margin-top:1.5rem;">
+              <h3 style="color:#0A1628;margin-bottom:1.25rem;font-size:1.2rem;">Request a Service</h3>
+              <form class="contact-form" style="background:#F4F4F4;border-radius:8px;padding:1.75rem;">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="sv-name">Full Name *</label>
+                    <input type="text" id="sv-name" placeholder="John Smith" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="sv-phone">Phone Number</label>
+                    <input type="tel" id="sv-phone" placeholder="0114 000 0000">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="sv-email">Email *</label>
+                  <input type="email" id="sv-email" placeholder="john@email.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="sv-type">Equipment Type</label>
+                  <select id="sv-type">
+                    <option>Downhill Skis</option>
+                    <option>Snowboard</option>
+                    <option>Touring Skis</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sv-service">Service Required</label>
+                  <select id="sv-service">
+                    <option>Basic Service (£25)</option>
+                    <option>Full Service (£45)</option>
+                    <option>Premium Service (£65)</option>
+                    <option>Edge Sharpen Only (£15)</option>
+                    <option>Wax Only (£12)</option>
+                    <option>Binding Mount (£30)</option>
+                    <option>Not sure — please advise</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sv-notes">Additional notes / known damage</label>
+                  <textarea id="sv-notes" placeholder="Describe any visible damage, specific issues, or requests..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;font-size:1.1rem;padding:1rem;">Submit Service Request</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about our services</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">Why is professional boot fitting so important? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">Professional boot fitting is crucial for comfort, performance, and injury prevention. A properly fitted boot ensures efficient power transfer to your skis, reduces pressure points, and prevents fatigue — allowing you to ski longer and better with enhanced control. Without proper fitting, even the most expensive boot can cause pain and reduce performance significantly.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How long does a boot fitting session take? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">A comprehensive boot fitting session typically takes between 1 to 2 hours. This allows our expert fitters ample time for foot assessment, trying various models, heat moulding processes, and any necessary adjustments to achieve the perfect personalised fit. We recommend booking in advance to ensure we have dedicated time for you.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How often should I get my skis serviced? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">The frequency depends on how often you ski and in what conditions. For casual skiers, a full service at the beginning and end of the season is usually sufficient. More frequent skiers, or those tackling aggressive terrain, might benefit from waxing every 3–5 ski days and edge tunes as needed. Rocky or icy conditions are hardest on edges and bases — we can advise on inspecting your own equipment between services.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What's included in a basic ski service? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">Our basic ski service (£25) includes a thorough base clean, professional edge sharpening and deburring, minor base repairs (filling small scratches), and a hot wax application using high-quality universal wax to ensure optimal glide and protection. For more significant damage or a full grind, we'd recommend our Full Service at £45.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can I get my boots heat moulded if I bought them elsewhere? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">Yes, absolutely. We can heat mould most modern ski boot liners regardless of where they were purchased. Bring your boots in and one of our fitters will assess whether heat moulding is appropriate and what customisation options are available. Please call ahead to confirm we can accommodate your specific boot model.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Do you service snowboards as well as skis? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">Yes! We service all snowboards to the same high standard as our ski servicing. Our snowboard service (£45) covers base grind or repair, edge sharpening, and a quality hot wax. We can also re-mount bindings and adjust stance width and angles. Simply drop your board in-store during opening hours.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How quickly can you turn around a service? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">Standard turnaround is 24–48 hours for most services. During peak pre-season periods (October–December) this can extend slightly. If you need your equipment urgently — for example you're heading away at the weekend — please call us on 0114 272 8800 and we'll do our best to accommodate you.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA STRIP ── -->
+  <section style="background:#E63946;padding:3.5rem 0;text-align:center;">
+    <div class="container">
+      <h2 style="color:#fff;margin-bottom:0.75rem;">Ready to Get the Perfect Fit?</h2>
+      <p style="color:rgba(255,255,255,0.85);margin-bottom:1.75rem;max-width:520px;margin-left:auto;margin-right:auto;">Join thousands of Sheffield skiers and snowboarders who trust our team to get them dialled in for the mountain.</p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a href="#boot-fitting" class="btn btn-secondary">Book Boot Fitting</a>
+        <a href="shop.html" class="btn" style="background:#fff;color:#E63946;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:0.04em;text-transform:uppercase;padding:0.85rem 2rem;border-radius:4px;transition:opacity 0.2s;">Browse Ski Boots</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">DICK'S<span>BOARD</span>STORE</div>
+          <p class="footer-tagline">Sheffield's independent ski & snowboard specialist since 1989. Passionate about winter sports, expert boot fitting, and helping you find your perfect kit.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">in</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">✕</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="services.html">Boot Fitting</a></li>
+            <li><a href="services.html">Ski Servicing</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Categories</div>
+          <ul class="footer-links">
+            <li><a href="shop.html">Alpine Skis</a></li>
+            <li><a href="shop.html">Snowboards</a></li>
+            <li><a href="shop.html">Ski Boots</a></li>
+            <li><a href="shop.html">Snowboard Boots</a></li>
+            <li><a href="shop.html">Clothing</a></li>
+            <li><a href="shop.html">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-heading">Find Us</div>
+          <p><strong>📍</strong> 42 Winter Street, Sheffield, S1 4GH</p>
+          <p><strong>📞</strong> 0114 272 8800</p>
+          <p><strong>✉️</strong> hello@dicksboardstore.co.uk</p>
+          <br>
+          <div class="footer-heading" style="margin-bottom:0.75rem;">Opening Hours</div>
+          <table class="hours-table">
+            <tr><td>Mon–Fri</td><td>9:30am – 6:00pm</td></tr>
+            <tr><td>Saturday</td><td>9:00am – 5:30pm</td></tr>
+            <tr><td>Sunday</td><td>10:00am – 4:00pm</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Dick's Board Store Ltd. All rights reserved. | Sheffield, UK |
+          <a href="#" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> ·
+          <a href="#" style="color:rgba(255,255,255,0.4);">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
