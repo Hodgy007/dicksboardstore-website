@@ -4,4 +4,5 @@ package-lock.json
 *.opt.jpg
 scrape-images.js
 scrape-products.js
+compress-thumbs.js
 products.json
