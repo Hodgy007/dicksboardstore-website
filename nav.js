@@ -148,8 +148,8 @@
   });
 
   // ── Shop filters ──
-  var productGrid = document.querySelector('.products-grid');
-  if (productGrid && document.getElementById('apply-filters-btn')) {
+  var productGrid = document.querySelector('.shop-main .products-grid');
+  if (productGrid) {
 
     var allCards = Array.prototype.slice.call(productGrid.querySelectorAll('.product-card'));
     var countEl = document.querySelector('.shop-count strong');
@@ -203,8 +203,10 @@
       });
     });
 
-    // Apply Filters button
-    document.getElementById('apply-filters-btn').addEventListener('click', applyFilters);
+    // Checkboxes filter on change
+    document.querySelectorAll('.shop-sidebar input[type="checkbox"]').forEach(function(cb) {
+      cb.addEventListener('change', applyFilters);
+    });
 
     // Live price slider
     var priceSlider = document.querySelector('.price-range input[type="range"]');
