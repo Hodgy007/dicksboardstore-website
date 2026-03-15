@@ -59,14 +59,14 @@
   <section class="section-sm bg-light">
     <div class="container">
       <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;">
-        <a href="#" class="btn btn-primary" style="font-size:0.85rem;padding:0.5rem 1.1rem;">All Products</a>
-        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Alpine Skis</a>
-        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Snowboards</a>
-        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Ski Boots</a>
-        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Snowboard Boots</a>
-        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Jackets</a>
-        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Goggles</a>
-        <a href="#" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Helmets</a>
+        <button class="btn btn-primary cat-quick-btn" data-cat="all" style="font-size:0.85rem;padding:0.5rem 1.1rem;">All Products</button>
+        <button class="btn btn-outline cat-quick-btn" data-cat="skis" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Alpine Skis</button>
+        <button class="btn btn-outline cat-quick-btn" data-cat="snowboards" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Snowboards</button>
+        <button class="btn btn-outline cat-quick-btn" data-cat="ski-boots" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Ski Boots</button>
+        <button class="btn btn-outline cat-quick-btn" data-cat="snowboard-boots" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Snowboard Boots</button>
+        <button class="btn btn-outline cat-quick-btn" data-cat="jackets" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Jackets</button>
+        <button class="btn btn-outline cat-quick-btn" data-cat="goggles" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Goggles</button>
+        <button class="btn btn-outline cat-quick-btn" data-cat="helmets" style="font-size:0.85rem;padding:0.5rem 1.1rem;">Helmets</button>
       </div>
     </div>
   </section>
@@ -142,9 +142,9 @@
 
           <div class="products-grid">
 
-            <a href="product.html" class="product-card" style="text-decoration:none;color:inherit;">
+            <a href="product.html" class="product-card" data-cat="ski-boots" data-brand="salomon" data-price="480" data-level="advanced" style="text-decoration:none;color:inherit;">
               <div class="product-img">
-                <img src="images/_data_product_images_L47927100sprosupradualboa120humus.jpg" alt="Salomon S/Pro Supra Dual Boa 120 Ski Boots" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_L47927100sprosupradualboa120humus.jpg" alt="Salomon S/Pro Supra Dual Boa 120 Ski Boots" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
                 <span class="product-badge badge badge-new">New</span>
               </div>
               <div class="product-body">
@@ -158,9 +158,9 @@
               </div>
             </a>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="ski-boots" data-brand="salomon" data-price="420" data-level="advanced">
               <div class="product-img">
-                <img src="images/_data_product_images_L47887700sprosupraboa105wgw.jpg" alt="Salomon S/Pro Supra Boa 105 GW Ski Boots" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_L47887700sprosupraboa105wgw.jpg" alt="Salomon S/Pro Supra Boa 105 GW Ski Boots" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
                 <span class="product-badge badge badge-best">Best Seller</span>
               </div>
               <div class="product-body">
@@ -174,9 +174,9 @@
               </div>
             </div>
 
-            <a href="product.html" class="product-card" style="text-decoration:none;color:inherit;">
+            <a href="product.html" class="product-card" data-cat="ski-boots" data-brand="salomon" data-price="380" data-level="intermediate" style="text-decoration:none;color:inherit;">
               <div class="product-img">
-                <img src="images/_data_product_images_L47889000sprosupraboa95Wrose.jpg" alt="Salomon S/Pro Supra Boa 95W Rose Ski Boots" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_L47889000sprosupraboa95Wrose.jpg" alt="Salomon S/Pro Supra Boa 95W Rose Ski Boots" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
               </div>
               <div class="product-body">
                 <div class="product-brand">Salomon</div>
@@ -189,9 +189,9 @@
               </div>
             </a>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="ski-boots" data-brand="k2" data-price="450" data-level="advanced">
               <div class="product-img">
-                <img src="images/_data_product_images_tiny_k2_2526_cortex-zonal-120-boa_KS251156_1.jpeg" alt="K2 Cortex Zonal 120 Boa Ski Boots" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_tiny_k2_2526_cortex-zonal-120-boa_KS251156_1.jpeg" alt="K2 Cortex Zonal 120 Boa Ski Boots" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
               </div>
               <div class="product-body">
                 <div class="product-brand">K2</div>
@@ -204,9 +204,9 @@
               </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="jackets" data-brand="icepeak" data-price="180" data-level="all">
               <div class="product-img">
-                <img src="images/_data_product_images_tiny_IcepeakCharltonmensjacketolive.jpg" alt="Icepeak Charlton Men's Jacket Olive" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_tiny_IcepeakCharltonmensjacketolive.jpg" alt="Icepeak Charlton Men's Jacket Olive" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
               </div>
               <div class="product-body">
                 <div class="product-brand">Icepeak</div>
@@ -219,9 +219,9 @@
               </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="gloves" data-brand="hestra" data-price="130" data-level="all">
               <div class="product-img">
-                <img src="images/_data_product_images_tiny_Armyleatherheliskifingernavy.jpg" alt="Hestra Army Leather Heli Ski Finger Gloves Navy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_tiny_Armyleatherheliskifingernavy.jpg" alt="Hestra Army Leather Heli Ski Finger Gloves Navy" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
                 <span class="product-badge badge badge-best">Best Seller</span>
               </div>
               <div class="product-body">
@@ -235,9 +235,9 @@
               </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="goggles" data-brand="salomon" data-price="165" data-level="all">
               <div class="product-img">
-                <img src="images/_data_product_images_tiny_L47625700radiumprosigmablackgoggle.jpg" alt="Salomon Radium Pro Sigma Goggle Black" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_tiny_L47625700radiumprosigmablackgoggle.jpg" alt="Salomon Radium Pro Sigma Goggle Black" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
                 <span class="product-badge badge badge-new">New</span>
               </div>
               <div class="product-body">
@@ -251,9 +251,9 @@
               </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="helmets" data-brand="salomon" data-price="175" data-level="all">
               <div class="product-img">
-                <img src="images/_data_product_images_L47298700okravisorhelmetk.jpg" alt="Salomon Okra Visor Ski Helmet" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_L47298700okravisorhelmetk.jpg" alt="Salomon Okra Visor Ski Helmet" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
               </div>
               <div class="product-body">
                 <div class="product-brand">Salomon</div>
@@ -266,9 +266,9 @@
               </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="skis" data-brand="salomon" data-price="95" data-level="all">
               <div class="product-img">
-                <img src="images/_data_product_images_tiny_L40559000salmonpoles.jpg" alt="Salomon Ski Poles" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_tiny_L40559000salmonpoles.jpg" alt="Salomon Ski Poles" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
               </div>
               <div class="product-body">
                 <div class="product-brand">Salomon</div>
@@ -281,9 +281,9 @@
               </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="ski-boots" data-brand="salomon" data-price="280" data-level="intermediate">
               <div class="product-img">
-                <img src="images/_data_product_images_tiny_L47655300sprosupra90w.jpg" alt="Salomon S/Pro Supra 90W Ski Boots" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_tiny_L47655300sprosupra90w.jpg" alt="Salomon S/Pro Supra 90W Ski Boots" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
               </div>
               <div class="product-body">
                 <div class="product-brand">Salomon</div>
@@ -296,9 +296,9 @@
               </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="jackets" data-brand="icepeak" data-price="160" data-level="all">
               <div class="product-img">
-                <img src="images/_data_product_images_tiny_IcepeakFriscoMenswaddedjacketblack.jpg" alt="Icepeak Frisco Men's Waddded Jacket Black" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_tiny_IcepeakFriscoMenswaddedjacketblack.jpg" alt="Icepeak Frisco Men's Waddded Jacket Black" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
                 <span class="product-badge badge badge-best">Best Seller</span>
               </div>
               <div class="product-body">
@@ -312,9 +312,9 @@
               </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-cat="jackets" data-brand="luhta" data-price="165" data-level="all">
               <div class="product-img">
-                <img src="images/_data_product_images_tiny_LuhtaSuukisvaaraWomensJacketAnthracite.jpg" alt="Luhta Suukisvaara Women's Jacket Anthracite" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                <img src="images/_data_product_images_tiny_LuhtaSuukisvaaraWomensJacketAnthracite.jpg" alt="Luhta Suukisvaara Women's Jacket Anthracite" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
                 <span class="product-badge badge badge-sale">Sale</span>
               </div>
               <div class="product-body">

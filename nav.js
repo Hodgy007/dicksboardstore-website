@@ -147,6 +147,97 @@
     });
   });
 
+  // ── Shop filters ──
+  var allCards = document.querySelectorAll('.products-grid .product-card');
+  var countEl = document.querySelector('.shop-count strong');
+
+  function updateCount(visible) {
+    if (countEl) countEl.textContent = visible;
+  }
+
+  function applyFilters() {
+    // Get active category
+    var activeCat = 'all';
+    document.querySelectorAll('.cat-quick-btn').forEach(function(b) {
+      if (b.classList.contains('btn-primary')) activeCat = b.dataset.cat;
+    });
+
+    // Get checked brands
+    var checkedBrands = [];
+    document.querySelectorAll('.filter-option input[id^="b-"]:checked').forEach(function(cb) {
+      checkedBrands.push(cb.id.replace('b-', ''));
+    });
+
+    // Get checked skill levels
+    var checkedLevels = [];
+    document.querySelectorAll('.filter-option input[id^="sl-"]:checked').forEach(function(cb) {
+      checkedLevels.push(cb.id.replace('sl-', ''));
+    });
+
+    // Get price range
+    var maxPrice = 800;
+    var priceRange = document.querySelector('.price-range input[type="range"]');
+    var maxInput = document.querySelector('.price-inputs input:last-of-type');
+    if (priceRange) maxPrice = parseInt(priceRange.value);
+    if (maxInput && maxInput.value) maxPrice = parseInt(maxInput.value);
+
+    var visible = 0;
+    allCards.forEach(function(card) {
+      var cat = card.dataset.cat || '';
+      var brand = card.dataset.brand || '';
+      var price = parseInt(card.dataset.price || 0);
+      var level = card.dataset.level || 'all';
+
+      var catMatch = activeCat === 'all' || cat === activeCat;
+      var brandMatch = checkedBrands.length === 0 || checkedBrands.indexOf(brand) !== -1;
+      var levelMatch = checkedLevels.length === 0 || checkedLevels.indexOf(level) !== -1 || level === 'all';
+      var priceMatch = price <= maxPrice;
+
+      if (catMatch && brandMatch && levelMatch && priceMatch) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    updateCount(visible);
+  }
+
+  // Category quick buttons
+  document.querySelectorAll('.cat-quick-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.cat-quick-btn').forEach(function(b) {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      });
+      this.classList.remove('btn-outline');
+      this.classList.add('btn-primary');
+      applyFilters();
+    });
+  });
+
+  // Apply filters button
+  var applyBtn = document.querySelector('.shop-sidebar .btn-primary');
+  if (applyBtn) {
+    applyBtn.addEventListener('click', applyFilters);
+  }
+
+  // Live price range slider
+  var priceSlider = document.querySelector('.price-range input[type="range"]');
+  var maxPriceInput = document.querySelector('.price-inputs input:last-of-type');
+  if (priceSlider) {
+    priceSlider.addEventListener('input', function() {
+      if (maxPriceInput) maxPriceInput.value = this.value;
+      applyFilters();
+    });
+  }
+  if (maxPriceInput) {
+    maxPriceInput.addEventListener('input', function() {
+      if (priceSlider) priceSlider.value = this.value;
+      applyFilters();
+    });
+  }
+
   // ── Smooth scroll for anchor links ──
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
