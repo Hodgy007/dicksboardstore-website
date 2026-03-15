@@ -379,8 +379,12 @@
 
       document.querySelectorAll('.filter-option input[id^="b-"]').forEach(function(cb) {
         var brand = cb.id.replace('b-', '');
-        var countSpan = cb.parentElement.querySelector('.filter-count');
-        if (countSpan) countSpan.textContent = '(' + (brandCounts[brand] || 0) + ')';
+        var count = brandCounts[brand] || 0;
+        var row = cb.parentElement;
+        var countSpan = row.querySelector('.filter-count');
+        if (countSpan) countSpan.textContent = '(' + count + ')';
+        // Hide rows with 0 results unless they are checked
+        row.style.display = (count === 0 && !cb.checked) ? 'none' : '';
       });
     }
 
