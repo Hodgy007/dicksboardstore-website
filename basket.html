@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Basket | Dick's Board Store Sheffield</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">DICK'S<span>BOARD</span>STORE</a>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About &amp; Find Us</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+        <div class="header-actions">
+          <button class="basket-btn" aria-label="View basket">
+            <span class="basket-icon">🛒</span>
+            Basket
+            <span class="basket-count">0</span>
+          </button>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About &amp; Find Us</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Basket</span>
+      </div>
+      <h1>Your Basket</h1>
+    </div>
+  </section>
+
+  <!-- ── BASKET ── -->
+  <section class="section" id="basket-page">
+    <div class="container">
+      <div class="basket-layout">
+
+        <!-- Items -->
+        <div>
+          <div class="basket-items-header">
+            <span style="grid-column:1/3;">Product</span>
+            <span>Qty</span>
+            <span>Price</span>
+            <span></span>
+          </div>
+          <div class="basket-items"></div>
+          <div style="margin-top:1.5rem;">
+            <a href="shop.html" class="btn btn-outline">← Continue Shopping</a>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="basket-summary">
+          <h3>Order Summary</h3>
+          <div class="basket-summary-values"></div>
+          <button class="btn btn-primary" style="width:100%;margin-top:1.5rem;font-size:1.05rem;padding:1rem;" onclick="alert('Checkout coming soon — payment integration required. See README for details.')">
+            Proceed to Checkout
+          </button>
+          <div style="margin-top:1.25rem;padding:1rem;background:#fff;border-radius:6px;border:1px solid #eee;">
+            <div style="font-size:0.82rem;color:#555;line-height:1.6;">
+              <div style="margin-bottom:0.4rem;">✅ Free UK delivery on orders over £100</div>
+              <div style="margin-bottom:0.4rem;">✅ Easy returns within 30 days</div>
+              <div>✅ Expert advice — call us on 0114 272 8800</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">DICK'S<span>BOARD</span>STORE</div>
+          <p class="footer-tagline">Sheffield's independent ski &amp; snowboard specialist since 1989. Passionate about winter sports, expert boot fitting, and helping you find your perfect kit.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">in</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">✕</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="services.html">Boot Fitting</a></li>
+            <li><a href="services.html">Ski Servicing</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Categories</div>
+          <ul class="footer-links">
+            <li><a href="shop.html">Alpine Skis</a></li>
+            <li><a href="shop.html">Snowboards</a></li>
+            <li><a href="shop.html">Ski Boots</a></li>
+            <li><a href="shop.html">Snowboard Boots</a></li>
+            <li><a href="shop.html">Clothing</a></li>
+            <li><a href="shop.html">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <div class="footer-heading">Find Us</div>
+          <p><strong>📍</strong> Alpine House, 84&ndash;90 Infirmary Road, Sheffield, S6 3DG</p>
+          <p><strong>📞</strong> 0114 272 8800</p>
+          <p><strong>✉️</strong> hello@dicksboardstore.co.uk</p>
+          <br>
+          <div class="footer-heading" style="margin-bottom:0.75rem;">Opening Hours</div>
+          <table class="hours-table">
+            <tr><td>Mon–Fri</td><td>9:30am – 6:00pm</td></tr>
+            <tr><td>Saturday</td><td>9:00am – 5:30pm</td></tr>
+            <tr><td>Sunday</td><td>10:00am – 4:00pm</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Dick's Board Store Ltd. All rights reserved. | Sheffield, UK |
+          <a href="#" style="color:rgba(255,255,255,0.4);">Privacy Policy</a> ·
+          <a href="#" style="color:rgba(255,255,255,0.4);">Terms</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
