@@ -97,7 +97,10 @@
     '<div class="cart-panel">' +
       '<div class="cart-panel-header">' +
         '<h3>Your Basket <span class="cart-item-count"></span></h3>' +
-        '<button class="cart-close" aria-label="Close basket">&times;</button>' +
+        '<div style="display:flex;align-items:center;gap:0.75rem;">' +
+          '<button class="cart-clear" aria-label="Clear basket">Clear all</button>' +
+          '<button class="cart-close" aria-label="Close basket">&times;</button>' +
+        '</div>' +
       '</div>' +
       '<div class="cart-panel-body"></div>' +
       '<div class="cart-panel-footer">' +
@@ -112,6 +115,12 @@
 
   var cartDrawer = document.getElementById('cart-drawer');
 
+  function clearCart() {
+    saveCart([]);
+    updateCartUI();
+    renderCartDrawerItems();
+  }
+
   function openCartDrawer() {
     renderCartDrawerItems();
     cartDrawer.classList.add('open');
@@ -125,6 +134,7 @@
 
   cartDrawer.querySelector('.cart-close').addEventListener('click', closeCartDrawer);
   cartDrawer.querySelector('.cart-overlay').addEventListener('click', closeCartDrawer);
+  cartDrawer.querySelector('.cart-clear').addEventListener('click', clearCart);
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && cartDrawer.classList.contains('open')) closeCartDrawer();
@@ -608,6 +618,14 @@
       });
     }
     renderBasketPage();
+
+    var clearBtn = document.getElementById('clear-basket-btn');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function() {
+        clearCart();
+        renderBasketPage();
+      });
+    }
   }
 
 })();

@@ -1769,6 +1769,16 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
   padding: 0;
 }
 .cart-close:hover { color: #0A1628; }
+.cart-clear {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: #aaa;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+.cart-clear:hover { color: #E63946; }
 
 .cart-panel-body {
   flex: 1;
