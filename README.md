@@ -46,6 +46,24 @@ npx serve .
 # open http://localhost:3000
 ```
 
+### Hero video
+
+The homepage hero uses an AI-generated video (`images/hero-skier.mp4`) as a fullscreen background.
+
+**How to regenerate / replace it:**
+
+1. Go to [runwayml.com](https://runwayml.com) (Gen-4 or later)
+2. Use a prompt like:
+   ```
+   A skier carving fast down a pristine snowy mountain slope, powder snow spraying,
+   bright sunny alpine day, dramatic mountain peaks in background, cinematic slow
+   motion, wide angle shot, photorealistic, GoPro style
+   ```
+3. Set duration to **5 seconds**, download as **MP4**
+4. Compress with [HandBrake](https://handbrake.fr) — preset: Fast 1080p30, RF quality 28 — target ~2–3MB
+5. Save as `images/hero-skier.mp4` (overwrites the existing file)
+6. Commit and push — no code changes needed
+
 ### Deployment
 
 Pushed to `main` branch → GitHub Actions auto-deploys to GitHub Pages.
