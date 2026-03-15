@@ -90,6 +90,8 @@
   }
 
   // ── Cart Drawer ──
+  var basePath = window.location.pathname.includes('/products/') ? '../' : '';
+
   var drawerHTML = '<div id="cart-drawer">' +
     '<div class="cart-overlay"></div>' +
     '<div class="cart-panel">' +
@@ -100,7 +102,7 @@
       '<div class="cart-panel-body"></div>' +
       '<div class="cart-panel-footer">' +
         '<div class="cart-total-row"><span>Total</span><strong class="cart-total-price"></strong></div>' +
-        '<a href="basket.html" class="btn btn-primary" style="display:block;text-align:center;margin-top:1rem;">View Basket &amp; Checkout</a>' +
+        '<a href="' + basePath + 'basket.html" class="btn btn-primary" style="display:block;text-align:center;margin-top:1rem;">View Basket &amp; Checkout</a>' +
         '<p style="font-size:0.78rem;color:#888;text-align:center;margin-top:0.75rem;">Free UK delivery over £100</p>' +
       '</div>' +
     '</div>' +
@@ -138,7 +140,7 @@
     totalEl.textContent = '£' + cartTotal(cart).toFixed(2);
 
     if (cart.length === 0) {
-      body.innerHTML = '<div class="cart-empty"><span>🛒</span><p>Your basket is empty</p><a href="shop.html" class="btn btn-outline" style="margin-top:1rem;">Continue Shopping</a></div>';
+      body.innerHTML = '<div class="cart-empty"><span>🛒</span><p>Your basket is empty</p><a href="' + basePath + 'shop.html" class="btn btn-outline" style="margin-top:1rem;">Continue Shopping</a></div>';
       return;
     }
 
