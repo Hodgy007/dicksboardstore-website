@@ -147,19 +147,18 @@
     });
   });
 
-  // ── Shop filters ──
+  // ── Shop filters + pagination ──
   var productGrid = document.querySelector('.shop-main .products-grid');
   if (productGrid) {
 
     var allCards = Array.prototype.slice.call(productGrid.querySelectorAll('.product-card'));
     var countEl = document.querySelector('.shop-count strong');
+    var paginationEl = document.getElementById('shop-pagination');
     var activeCat = 'all';
+    var currentPage = 1;
+    var perPage = 6;
 
-    function updateCount(n) {
-      if (countEl) countEl.textContent = n;
-    }
-
-    function applyFilters() {
+    function getFilteredCards() {
       var checkedBrands = Array.prototype.slice.call(
         document.querySelectorAll('.filter-option input[id^="b-"]:checked')
       ).map(function(cb) { return cb.id.replace('b-', ''); });
@@ -171,22 +170,69 @@
       var priceSlider = document.querySelector('.price-range input[type="range"]');
       var maxPrice = priceSlider ? parseInt(priceSlider.value) : 800;
 
-      var visible = 0;
-      allCards.forEach(function(card) {
+      return allCards.filter(function(card) {
         var cat   = card.getAttribute('data-cat') || '';
         var brand = card.getAttribute('data-brand') || '';
         var price = parseInt(card.getAttribute('data-price') || '0');
         var level = card.getAttribute('data-level') || 'all';
 
-        var show = (activeCat === 'all' || cat === activeCat) &&
-                   (checkedBrands.length === 0 || checkedBrands.indexOf(brand) !== -1) &&
-                   (checkedLevels.length === 0 || checkedLevels.indexOf(level) !== -1 || level === 'all') &&
-                   price <= maxPrice;
-
-        card.style.display = show ? '' : 'none';
-        if (show) visible++;
+        return (activeCat === 'all' || cat === activeCat) &&
+               (checkedBrands.length === 0 || checkedBrands.indexOf(brand) !== -1) &&
+               (checkedLevels.length === 0 || checkedLevels.indexOf(level) !== -1 || level === 'all') &&
+               price <= maxPrice;
       });
-      updateCount(visible);
+    }
+
+    function renderPage() {
+      var filtered = getFilteredCards();
+      var totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+      if (currentPage > totalPages) currentPage = 1;
+
+      var start = (currentPage - 1) * perPage;
+      var end = start + perPage;
+
+      // Show/hide cards
+      allCards.forEach(function(card) { card.style.display = 'none'; });
+      filtered.slice(start, end).forEach(function(card) { card.style.display = ''; });
+
+      if (countEl) countEl.textContent = filtered.length;
+
+      // Rebuild pagination
+      if (paginationEl) {
+        paginationEl.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        function makePageBtn(label, page, isActive) {
+          var btn = document.createElement('button');
+          btn.textContent = label;
+          btn.style.cssText = 'padding:0.6rem 1rem;border-radius:4px;font-family:\'Barlow Condensed\',sans-serif;font-weight:700;cursor:pointer;border:1px solid #ddd;';
+          if (isActive) {
+            btn.style.background = '#E63946';
+            btn.style.color = '#fff';
+            btn.style.border = 'none';
+          } else {
+            btn.style.background = '#fff';
+            btn.style.color = '#0A1628';
+          }
+          btn.addEventListener('click', function() {
+            currentPage = page;
+            renderPage();
+            productGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+          return btn;
+        }
+
+        if (currentPage > 1) paginationEl.appendChild(makePageBtn('← Prev', currentPage - 1, false));
+        for (var i = 1; i <= totalPages; i++) {
+          paginationEl.appendChild(makePageBtn(i, i, i === currentPage));
+        }
+        if (currentPage < totalPages) paginationEl.appendChild(makePageBtn('Next →', currentPage + 1, false));
+      }
+    }
+
+    function applyFilters() {
+      currentPage = 1;
+      renderPage();
     }
 
     // Category quick buttons
@@ -217,6 +263,9 @@
         applyFilters();
       });
     }
+
+    // Initial render
+    renderPage();
     if (maxPriceInput) {
       maxPriceInput.addEventListener('input', function() {
         if (priceSlider) priceSlider.value = this.value;
