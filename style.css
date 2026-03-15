@@ -1601,6 +1601,20 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
 .faq-answer.open { display: block; }
 
 /* ── ABOUT PAGE ── */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.find-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1690,7 +1704,7 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
 
 .info-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -1732,7 +1746,13 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
   .service-detail-grid { grid-template-columns: 1fr; }
   .service-visual { height: 200px; }
 
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: 1fr; }
+
+  .about-story-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-story-grid .story-image { order: -1; }
+  .about-story-image-wrap { height: 280px !important; }
+
+  .find-us-grid { grid-template-columns: 1fr; }
 
   .info-cards { grid-template-columns: 1fr; }
 
